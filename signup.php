@@ -29,9 +29,6 @@ $connection = mysqli_connect('localhost','root','','kollabo');
       $password = $_POST['password'];
       $email = $_POST['email'];
      
-        if (!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email)){ 
-
-echo "<center>Invalid email</center>";}
         
         
         $query = "INSERT INTO student_signup(firstname,lastname,username,password,email) VALUES ('$firstname','$lastname','$username','$password','$email')";
