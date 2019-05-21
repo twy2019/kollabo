@@ -81,8 +81,8 @@
   <div class="form">
     
     <form action="" method="post" class="login-form">
-      <input type="text" name="uname" placeholder="username"/>
-      <input type="password" name="pass" placeholder="password"/>
+      <input type="text" name="uname" placeholder="username" required/>
+      <input type="password" name="pass" placeholder="password" required/>
       <input type="submit" name="submit" value="login" id="btnn">
       <p class="message">Not registered? <a href="signup.php">Create an account</a></p>
     </form>

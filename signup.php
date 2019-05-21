@@ -31,6 +31,7 @@ $connection = mysqli_connect('localhost','root','','kollabo');
      
         
         
+        
         $query = "INSERT INTO student_signup(firstname,lastname,username,password,email) VALUES ('$firstname','$lastname','$username','$password','$email')";
         
         $result = mysqli_query($connection,$query);
@@ -68,6 +69,7 @@ $connection = mysqli_connect('localhost','root','','kollabo');
          $query = "INSERT INTO teacher_signup(firstname,lastname,username,password,course,email) VALUES ('$fname','$lname','$uname','$pword','$course','$tmail')";
         
         $result = mysqli_query($connection,$query);
+         header("Location: ./success.php");
         
        if(!$result){
        die("QUERY FAILED ". mysqli_error($connection));
@@ -125,28 +127,28 @@ function chck1(){
 			<div class="student-htm">
 				<div class="group">
 					<label for="user" class="label">Firstname</label>
-					<input id="user" name = "firstname" type="text" class="input">
+					<input id="user" name = "firstname" type="text" class="input" required>
 				</div>
 				<div class="group">
 					<label for="user" class="label">Lastname</label>
-					<input id="user" name = "lastname" type="text" class="input">
+					<input id="user" name = "lastname" type="text" class="input" required>
 				</div>
 				<div class="group">
 					<label for="user" class="label">Username</label>
-					<input id="username" name = "username" type="text" class="input">
+					<input id="username" name = "username" type="text" class="input" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-					<input id="password" type="password" name = "password" class="input" data-type="password">
+					<input id="password" type="password" name = "password" class="input" data-type="password" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Repeat Password</label>
-					<input id="confirm_password" type="password" class="input" data-type="password">
+					<input id="confirm_password" type="password" class="input" data-type="password" required>
 				</div>
 				
 				<div class="group">
 					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" name = "email" class="input">
+					 <input type="email" name="email" class="input"  id= "email" required >
 				</div>
 				<div class="group">
 					<input type="submit" class="button" name =submit value="Sign Up">
@@ -166,31 +168,31 @@ function chck1(){
 			
 			    <div class="group">
 					<label for="user" class="label">Firstname</label>
-					<input id="user"  type="text" name="fname" class="input">
+					<input id="user"  type="text" name="fname" class="input" required>
 				</div>
 				<div class="group">
 					<label for="user" class="label">Lastname</label>
-					<input id="user" type="text" name="lname" class="input">
+					<input id="user" type="text" name="lname" class="input" required>
 				</div>
 				<div class="group">
 					<label for="user" class="label">Username</label>
-					<input id="user" type="text" name="uname" class="input">
+					<input id="user" type="text" name="uname" class="input"required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-					<input id="tpassword" type="password" name="pword" class="input" data-type="password">
+					<input id="tpassword" type="password" name="pword" class="input" data-type="password" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Repeat Password</label>
-					<input id="tconfirm_password" type="confirm_password" class="input" data-type="password">
+					<input id="tconfirm_password" type="confirm_password" class="input" data-type="password" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Course</label>
-					<input id="pass" type="text" name="course" class="input">
+					<input id="pass" type="text" name="course" class="input" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" name="tmail" class="input">
+					<input type="email" name="tmail" class="input"  id= "email" required >
 				</div>
 				<div class="group">
 					<input type="submit" class="button" name="submit2" value="Sign Up">
