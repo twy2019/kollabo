@@ -56,7 +56,7 @@
             $_SESSION['username'] = $db_user;
             $_SESSION['email'] = $db_email;
         
-       header("Location: ./student.php");
+       header("Location: ./chat.php");
             }
            
         }else if($username == $db_usert && $password == $db_passwordt){

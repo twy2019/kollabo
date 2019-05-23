@@ -1,0 +1,7 @@
+{
+    "name": "bonnie/kollabo",
+    "type": "project",
+    "require": {
+        "pusher/pusher-php-server": "^3.4"
+    }
+}
